@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceLens - Support & FAQ</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --primary-color: #06b6d4; /* Cyan Accent */
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at top right, #1e293b 0%, #0f172a 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max_width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo-container {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 15px 30px; /* Kisebb padding, szélesebb elrendezés */
+            background: rgba(6, 182, 212, 0.1);
+            border-radius: 24px;
+            border: var(--glass-border);
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.2);
+        }
+
+        /* JAVÍTVA: Szélesebb ikon, képarány megtartva */
+        .logo-container img {
+            display: block;
+            width: 200px; /* Szélesség beállítása */
+            height: auto; /* Magasság automatikus, hogy megtartsa az arányt */
+            max-width: 100%; /* Reszponzivitás */
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        /* --- CARDS --- */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- FAQ --- */
+        details {
+            background: rgba(255, 255, 255, 0.03);
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5em;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            padding: 15px;
+            padding-top: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* --- CONTACT BUTTON --- */
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #000;
+            font-weight: 700;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #22d3ee; /* Lighter Cyan */
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--primary-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <!-- JAVÍTVA: Szélesebb kép, arány megtartva -->
+                <img src="https://i.postimg.cc/15Bp6C81/pricelens-icon-nobg-wide.png" alt="PriceLens Logo">
+            </div>
+            <h1>PriceLens Support</h1>
+            <p class="subtitle">See the real price. Instantly.</p>
+        </header>
+
+        <!-- CONTACT SECTION -->
+        <section class="card">
+            <h2>📧 Contact Us</h2>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">
+                Experiencing issues with the camera or conversions? Have a feature request? 
+                We are here to help!
+            </p>
+            <!-- CSERÉLD LE A SAJÁT EMAIL CÍMEDRE! -->
+            <a href="mailto:support@pricelens.app" class="btn">Send Email</a>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="card">
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <details>
+                <summary>How do I unlock PRO features?</summary>
+                <div class="faq-answer">
+                    You can unlock PriceLens PRO directly within the app. Go to the <strong>Menu</strong> and tap on the yellow <strong>Unlock PRO</strong> button or the <strong>Virtual Cart</strong> icon. It is a one-time purchase or yearly subscription.
+                </div>
+            </details>
+
+            <details>
+                <summary>Why is the camera not scanning?</summary>
+                <div class="faq-answer">
+                    Please ensure you have granted Camera permissions in your device settings. Try to hold the phone steady and ensure good lighting on the price tag.
+                </div>
+            </details>
+
+            <details>
+                <summary>Does it work offline?</summary>
+                <div class="faq-answer">
+                    Yes! PriceLens saves the latest exchange rates to your device. You can scan and convert prices even without an internet connection.
+                </div>
+            </details>
+
+            <details>
+                <summary>How do I restore my purchase?</summary>
+                <div class="faq-answer">
+                    If you reinstalled the app or switched phones, go to the PRO Unlock screen and tap <strong>"Restore Purchases"</strong> at the bottom.
+                </div>
+            </details>
+        </section>
+
+        <!-- PRIVACY & TERMS LINKS -->
+        <footer>
+            <p>&copy; 2025 PriceLens. All rights reserved.</p>
+            <br>
+            <!-- Ha van Privacy Policy hosted URL-ed, cseréld le a # jelet -->
+            <a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a>
+        </footer>
+    </div>
+
+</body>
+</html>
